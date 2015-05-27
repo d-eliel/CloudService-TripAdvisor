@@ -13,7 +13,7 @@ namespace TripCommon
     public class TripDbContext : DbContext
     {
         public TripDbContext()
-            : base("name=TripDbContext")
+            : base("name=TripDbConnString")
         {}
 
         public TripDbContext(string connString)

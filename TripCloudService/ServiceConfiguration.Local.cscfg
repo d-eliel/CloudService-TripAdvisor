@@ -3,7 +3,7 @@
   <Role name="TripWorkerRole">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="DbConnectionString" value="Data Source=(localdb)\ProjectsV12;Initial Catalog=TripAdvisorDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" />
+      <Setting name="TripDbConnString" value="Data Source=(localdb)\ProjectsV12;Initial Catalog=TripAdvisorDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" />
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
       <Setting name="AdvisorStorageConnection" value="UseDevelopmentStorage=true" />
     </ConfigurationSettings>

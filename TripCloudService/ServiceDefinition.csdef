@@ -4,7 +4,7 @@
     <LocalResources>
     </LocalResources>
     <ConfigurationSettings>
-      <Setting name="DbConnectionString" />
+      <Setting name="TripDbConnString" />
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
       <Setting name="AdvisorStorageConnection" />
     </ConfigurationSettings>

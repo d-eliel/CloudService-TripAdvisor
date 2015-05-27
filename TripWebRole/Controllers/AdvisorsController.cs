@@ -16,7 +16,7 @@ using System.IO;
 
 /* ******************************* *
  *      Eliel Dabush 204280036     *
- * ****************************** */
+ * ******************************  */
 namespace TripWebRole.Controllers
 {
     public class AdvisorsController : Controller
@@ -202,9 +202,34 @@ namespace TripWebRole.Controllers
             TripAdvice tripAdvice = await db.TripAdviceTable.FindAsync(id);
             db.TripAdviceTable.Remove(tripAdvice);
             await db.SaveChangesAsync();
+            if (tripAdvice.ImageURL != null)
+            {
+                await DeleteBlobAsync(tripAdvice.ImageURL);
+            }
+            if (tripAdvice.ThumbnailURL != null)
+            {
+                await DeleteBlobAsync(tripAdvice.ThumbnailURL);
+            }
             return RedirectToAction("Index");
         }
-    
+
+        private async Task DeleteBlobAsync(string imageUrl)
+        {
+            Uri blobUri = new Uri(imageUrl);
+            string blobName = blobUri.Segments[blobUri.Segments.Length - 1];
+
+            CloudBlockBlob blob = imagesContainer.GetBlockBlobReference(blobName);
+            await blob.DeleteAsync();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
     }   /* end class */
 }   /* end namespace */

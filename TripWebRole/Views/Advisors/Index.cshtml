@@ -72,7 +72,7 @@
         </td> 
         <td>
             @*Html.DisplayFor(modelItem => item.ThumbnailURL)*@
-            <img src="@item.ImageURL"  style="width: 200px"/>
+            <img src="@item.ThumbnailURL"  style="width: 200px"/>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.AdviceDate)
@@ -84,9 +84,9 @@
                 Delete link
                 in Edit & Delete ActionLinks': need to change the Index to Edit\Delete
             *@
-            @Html.ActionLink("Edit", "Index", new { id=item.TripAdviceID }) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.TripAdviceID }) |
             @Html.ActionLink("Details", "Details", new { id=item.TripAdviceID }) |
-            @Html.ActionLink("Delete", "Index", new { id=item.TripAdviceID })
+            @Html.ActionLink("Delete", "Delete", new { id=item.TripAdviceID })
         </td>
     </tr>
 }
