@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "TripCloudService", "TripCloudService\TripCloudService.ccproj", "{31B99CAA-B09E-4AA2-943A-93E951E6DF67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripWorkerRole", "TripWorkerRole\TripWorkerRole.csproj", "{43AA0172-61D9-41D9-9982-95CED2F6E5C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripWebRole", "TripWebRole\TripWebRole.csproj", "{A0B5D22B-A63F-4DE1-A63A-EB774606E722}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripCommon", "TripCommon\TripCommon.csproj", "{45E94764-22C7-4791-9D7E-45C0D70382BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31B99CAA-B09E-4AA2-943A-93E951E6DF67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31B99CAA-B09E-4AA2-943A-93E951E6DF67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31B99CAA-B09E-4AA2-943A-93E951E6DF67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31B99CAA-B09E-4AA2-943A-93E951E6DF67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43AA0172-61D9-41D9-9982-95CED2F6E5C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43AA0172-61D9-41D9-9982-95CED2F6E5C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43AA0172-61D9-41D9-9982-95CED2F6E5C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43AA0172-61D9-41D9-9982-95CED2F6E5C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0B5D22B-A63F-4DE1-A63A-EB774606E722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0B5D22B-A63F-4DE1-A63A-EB774606E722}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0B5D22B-A63F-4DE1-A63A-EB774606E722}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0B5D22B-A63F-4DE1-A63A-EB774606E722}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45E94764-22C7-4791-9D7E-45C0D70382BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45E94764-22C7-4791-9D7E-45C0D70382BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45E94764-22C7-4791-9D7E-45C0D70382BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45E94764-22C7-4791-9D7E-45C0D70382BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,106 @@
+﻿@model TripCommon.TripAdvice
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TripAdvice</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdviceType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdviceType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaceName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaceName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GeoLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GeoLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdviceText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdviceText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RankPlace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RankPlace)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThumbnailURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThumbnailURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdviceDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdviceDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

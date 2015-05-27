@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="TripCloudService" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="TripWorkerRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="DbConnectionString" value="Server=tcp:axhranefry.database.windows.net,1433;Database=TripAdvisorDB-204280036;User ID=dbadmin@axhranefry;Password={your_password_here};Trusted_Connection=False;Encrypt=True;Connection Timeout=30;" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=elieltripcloudservice;AccountKey=bUFLtcXgYIJhT1iMC3j5LqQp/8NwweUfSJwg9YbUeGanguGe4nx7V1hhLU3DGT43nZO8Gqkio6Xz8WqxSpGZZw==" />
+      <Setting name="AdvisorStorageConnection" value="DefaultEndpointsProtocol=https;AccountName=tripadvisor204280036;AccountKey=w1nMR0ZdNezwUtf7rFZqlbwLXxAY0OErQB2V+enh3QcwNahwJmfwPqUbkp7Ig89vjKU32lkpMgslBCHWiu6dHw==" />
+    </ConfigurationSettings>
+  </Role>
+  <Role name="TripWebRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=elieltripcloudservice;AccountKey=bUFLtcXgYIJhT1iMC3j5LqQp/8NwweUfSJwg9YbUeGanguGe4nx7V1hhLU3DGT43nZO8Gqkio6Xz8WqxSpGZZw==" />
+      <Setting name="AdvisorStorageConnection" value="DefaultEndpointsProtocol=https;AccountName=tripadvisor204280036;AccountKey=w1nMR0ZdNezwUtf7rFZqlbwLXxAY0OErQB2V+enh3QcwNahwJmfwPqUbkp7Ig89vjKU32lkpMgslBCHWiu6dHw==" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>

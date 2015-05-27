@@ -1,0 +1,104 @@
+﻿@model TripCommon.TripAdvice
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TripAdvice</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdviceType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdviceType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaceName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaceName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GeoLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GeoLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdviceText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdviceText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RankPlace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RankPlace)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageURL)
+        </dt>
+
+        <dd>
+            @*@Html.DisplayFor(model => model.ImageURL)*@
+            <img src="@(Model.ImageURL)" style="max-width:300px" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdviceDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdviceDate)
+        </dd>
+
+    </dl>
+</div>
+@*
+    Edit link
+    is disabled for this assignment. The functionality have been implemented but client can't use it for now.
+    in Edit ActionLink's: need to change the Index to Edit
+*@
+<p>
+    @Html.ActionLink("Edit", "Index", new { id = Model.TripAdviceID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
