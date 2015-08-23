@@ -1,94 +1,101 @@
 ﻿@model IEnumerable<TripCommon.TripAdvice>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Advices";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.UserName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AdviceType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PlaceName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.GeoLocation)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Country)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.City)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AdviceText)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.RankPlace)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ThumbnailURL)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AdviceDate)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AdviceType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PlaceName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GeoLocation)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Country)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.City)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AdviceText)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.RankPlace)
-        </td> 
-        <td>
-            @*Html.DisplayFor(modelItem => item.ThumbnailURL)*@
-            <img src="@item.ThumbnailURL"  style="width: 200px"/>
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AdviceDate)
-        </td>
-        <td>
-            @*
-                Edit link
-                    &           Disabled for this assignment. The functionality have been implemented but client can't use it for now.
-                Delete link
-                in Edit & Delete ActionLinks': need to change the Index to Edit\Delete
-            *@
-            @Html.ActionLink("Edit", "Edit", new { id=item.TripAdviceID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.TripAdviceID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.TripAdviceID })
-        </td>
-    </tr>
-}
-
-</table>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">
+                Advises
+            </h1>
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+        </div>
+        <div id="no-more-tables">
+            <table class="col-md-12 table table-hover cf">
+                <thead class="cf">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.UserName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.AdviceType)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PlaceName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.GeoLocation)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Country)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.City)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.AdviceText)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.RankPlace)
+                        </th>
+                        <th>
+                            Image
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.AdviceDate)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td data-title=@Html.DisplayNameFor(model => model.UserName)>
+                                @Html.DisplayFor(modelItem => item.UserName)
+                            </td>
+                            <td data-title=@Html.DisplayNameFor(model => model.AdviceType)>
+                                @Html.DisplayFor(modelItem => item.AdviceType)
+                            </td>
+                            <td data-title=@Html.DisplayNameFor(model => model.PlaceName)>
+                                @Html.DisplayFor(modelItem => item.PlaceName)
+                            </td>
+                            <td data-title=@Html.DisplayNameFor(model => model.GeoLocation)>
+                                @Html.DisplayFor(modelItem => item.GeoLocation).ToString().Split(',')[0] ,
+                                @Html.DisplayFor(modelItem => item.GeoLocation).ToString().Split(',')[1]
+                            </td>
+                            <td data-title=@Html.DisplayNameFor(model => model.Country)>
+                                @Html.DisplayFor(modelItem => item.Country)
+                            </td>
+                            <td data-title=@Html.DisplayNameFor(model => model.City)>
+                                @Html.DisplayFor(modelItem => item.City)
+                            </td>
+                            <td data-title=@Html.DisplayNameFor(model => model.AdviceText)>
+                                @Html.DisplayFor(modelItem => item.AdviceText)
+                            </td>
+                            <td data-title=@Html.DisplayNameFor(model => model.RankPlace)>
+                                @Html.DisplayFor(modelItem => item.RankPlace)
+                            </td>
+                            <td>
+                                @*Html.DisplayFor(modelItem => item.ThumbnailURL)*@
+                                <img src="@item.ThumbnailURL" class="my-thumbnail img-rounded" />
+                            </td>
+                            <td data-title="Advice Date">
+                                @Html.DisplayFor(modelItem => item.AdviceDate).ToString().Split(' ')[0]
+                            </td>
+                            <td>
+                                <h5 class="inline-href">
+                                    <a href="/Advisors/Edit/@item.TripAdviceID">Edit </a> | <a href="/Advisors/Details/@item.TripAdviceID"> Details </a> | <a href="/Advisors/Delete/@item.TripAdviceID"> Delete </a>
+                                </h5>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

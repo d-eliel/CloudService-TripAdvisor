@@ -25,7 +25,22 @@
         <div class="form-group">
             @Html.LabelFor(model => model.AdviceType, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.AdviceType, new { htmlAttributes = new { @class = "form-control", @required = "true" } })
+                @Html.DropDownListFor(model => model.AdviceType, new[]
+                {
+                    new SelectListItem { Value = "attraction", Text = "Attraction" },
+                    new SelectListItem { Value = "beach", Text = "Beach" },
+                    new SelectListItem { Value = "casino", Text = "Casino" },
+                    new SelectListItem { Value = "cinema", Text = "Cinema" },
+                    new SelectListItem { Value = "hotel", Text = "Hotel" },
+                    new SelectListItem { Value = "museum", Text = "Museum" },
+                    new SelectListItem { Value = "pathTrip", Text = "Path Trip" },
+                    new SelectListItem { Value = "pub", Text = "Pub" },
+                    new SelectListItem { Value = "restruant", Text = "Restruant" },
+                    new SelectListItem { Value = "show", Text = "Show" },
+                    new SelectListItem { Value = "sportsActivities", Text = "Sports Activities" },
+                    
+                },
+                new { htmlAttributes = new { @class = "form-control", @required = "true" } })
                 @Html.ValidationMessageFor(model => model.AdviceType, "", new { @class = "text-danger" })
             </div>
         </div>

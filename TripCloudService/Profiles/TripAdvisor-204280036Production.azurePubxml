@@ -10,13 +10,13 @@
     <AzureEnableWebDeploy>False</AzureEnableWebDeploy>
     <AzureFallbackToDeleteAndRecreateIfUpgradeFails>False</AzureFallbackToDeleteAndRecreateIfUpgradeFails>
     <AzureHostedServiceLabel>TripAdvisor-204280036</AzureHostedServiceLabel>
-    <AzureHostedServiceName>TripAdvisor-204280036</AzureHostedServiceName>
+    <AzureHostedServiceName>tripadvisor-204280036</AzureHostedServiceName>
     <AzureEnableIntelliTrace>False</AzureEnableIntelliTrace>
     <AzureEnableProfiling>False</AzureEnableProfiling>
     <AzureServiceConfiguration>Cloud</AzureServiceConfiguration>
     <AzureSolutionConfiguration>Release</AzureSolutionConfiguration>
-    <AzureStorageAccountLabel>ElielTripCloudService</AzureStorageAccountLabel>
-    <AzureStorageAccountName>elieltripcloudservice</AzureStorageAccountName>
+    <AzureStorageAccountLabel>TripAdvisor204280036</AzureStorageAccountLabel>
+    <AzureStorageAccountName>tripadvisor204280036</AzureStorageAccountName>
     <AzureAppendTimestampToDeploymentLabel>True</AzureAppendTimestampToDeploymentLabel>
   </PropertyGroup>
 </Project>

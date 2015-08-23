@@ -3,9 +3,11 @@
  * ****************************** */
 
 /* functions executions */
-
-getLocation();
-showDate();
+// when document ready
+$(document).ready(function () {
+    getLocation();
+    showDate();
+});
 
 /* functions definitions */
 
@@ -46,17 +48,13 @@ function showPosition (position) {
 }
 
 function showDate() {
+    // set date format 
     var dateString = new Date();
-
-    // date format works for local
-    //$("#adviceDate").val(dateString.getDate() + "/" + (dateString.getMonth() + 1) + "/" + dateString.getFullYear());
-
-    // date format works for cloud --> TODO: tried once in local and worked - need to be tested
     $("#adviceDate").val((dateString.getMonth() + 1) + "/" + dateString.getDate() + "/" + dateString.getFullYear());
 }
 
 /*  AdviceDate input element is disabled (client can't change it).
-    this script remove the disable attr so we will be able to submit it. */
+    this script remove the disable attr so we will be able to submit it when client click save/create. */
 $(function ($) {
 
     $('form').bind('submit', function () {

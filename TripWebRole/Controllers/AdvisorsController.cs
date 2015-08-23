@@ -13,6 +13,7 @@ using Microsoft.WindowsAzure.Storage.Queue;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.Azure;
 using System.IO;
+using TripWebRole.Models;
 
 /* ******************************* *
  *      Eliel Dabush 204280036     *
@@ -42,9 +43,12 @@ namespace TripWebRole.Controllers
         }
 
         // GET: Advisors
-        public async Task<ActionResult> Index()
+        public ActionResult Index()
         {
-            return View(await db.TripAdviceTable.ToListAsync());
+            ManageAdvisorCache advisorCache = new ManageAdvisorCache();
+            return View(advisorCache.GetAdvisesList());
+            // async Task<ActionResult>
+            //return View(await db.TripAdviceTable.ToListAsync());
         }
 
         // GET: Advisors/Details/5

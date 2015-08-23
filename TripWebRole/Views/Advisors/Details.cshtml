@@ -75,20 +75,20 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ImageURL)
-        </dt>
-
-        <dd>
-            @*@Html.DisplayFor(model => model.ImageURL)*@
-            <img src="@(Model.ImageURL)" style="max-width:300px" />
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.AdviceDate)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.AdviceDate)
+        </dd>
+
+        <dt>
+            Image
+        </dt>
+
+        <dd>
+            @*@Html.DisplayFor(model => model.ImageURL)*@
+            <img src="@(Model.ImageURL)" style="max-width:300px" />
         </dd>
 
     </dl>
@@ -99,6 +99,6 @@
     in Edit ActionLink's: need to change the Index to Edit
 *@
 <p>
-    @Html.ActionLink("Edit", "Index", new { id = Model.TripAdviceID }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TripAdviceID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
