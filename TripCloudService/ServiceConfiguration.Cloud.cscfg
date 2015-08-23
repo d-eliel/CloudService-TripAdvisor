@@ -3,16 +3,16 @@
     <Role name="TripWorkerRole">
         <Instances count="1" />
         <ConfigurationSettings>
-            <Setting name="TripDbConnString" value="Server=tcp:axhranefry.database.windows.net,1433;Database=TripAdvisorDB-204280036;User ID=dbadmin@axhranefry;Password=Aa123456;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;" />
-            <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=tripadvisor204280036;AccountKey=w1nMR0ZdNezwUtf7rFZqlbwLXxAY0OErQB2V+enh3QcwNahwJmfwPqUbkp7Ig89vjKU32lkpMgslBCHWiu6dHw==" />
-            <Setting name="AdvisorStorageConnection" value="DefaultEndpointsProtocol=https;AccountName=tripadvisor204280036;AccountKey=w1nMR0ZdNezwUtf7rFZqlbwLXxAY0OErQB2V+enh3QcwNahwJmfwPqUbkp7Ig89vjKU32lkpMgslBCHWiu6dHw==" />
+            <Setting name="TripDbConnString" value="Server=tcp:axhranefry.database.windows.net,1433;Database=TripAdvisorDB-204280036;<!-- MISSING ACCOUNT AND PASSWORD -->;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;" />
+            <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;<!-- MISSING AZURE ACCOUNT AND KEY --> "/>
+            <Setting name="AdvisorStorageConnection" value="DefaultEndpointsProtocol=https;<!-- MISSING AZURE ACCOUNT AND KEY --> />
         </ConfigurationSettings>
     </Role>
     <Role name="TripWebRole">
         <Instances count="1" />
         <ConfigurationSettings>
-            <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=tripadvisor204280036;AccountKey=w1nMR0ZdNezwUtf7rFZqlbwLXxAY0OErQB2V+enh3QcwNahwJmfwPqUbkp7Ig89vjKU32lkpMgslBCHWiu6dHw==" />
-            <Setting name="AdvisorStorageConnection" value="DefaultEndpointsProtocol=https;AccountName=tripadvisor204280036;AccountKey=w1nMR0ZdNezwUtf7rFZqlbwLXxAY0OErQB2V+enh3QcwNahwJmfwPqUbkp7Ig89vjKU32lkpMgslBCHWiu6dHw==" />
+            <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;<!-- MISSING AZURE ACCOUNT AND KEY -->" />
+            <Setting name="AdvisorStorageConnection" value="DefaultEndpointsProtocol=https;<!-- MISSING AZURE ACCOUNT AND KEY -->" />
             <Setting name="Microsoft.WindowsAzure.Plugins.Caching.ClientDiagnosticLevel" value="1" />
         </ConfigurationSettings>
     </Role>
